@@ -1,15 +1,20 @@
-# Starter Website
+# No Man's Fort Website
 
-This repository contains a simple starter website built with HTML, CSS, and JavaScript. It provides a basic structure that can be extended as we continue to develop the project.
+This project contains a simple HTML/CSS framework for the No Man's Fort website. The content here provides a starting point that can be refined and expanded.
 
 ## Getting Started
 
-Open `index.html` in your browser to view the website. No additional build steps are required.
+Open `index.html` in your browser to view the site. No build steps are needed.
 
 ## Project Structure
 
-- `index.html` - Main page of the website
-- `styles/main.css` - Basic styling
-- `script.js` - Simple JavaScript loaded on the page
+- `index.html` – Home page
+- `about.html` – History and fort details
+- `experience.html` – Luxury stay and amenities
+- `events.html` – Events and creative hire
+- `invest.html` – Lease or purchase information
+- `contact.html` – Basic enquiry form
+- `styles/` – Contains `main.css` for styling
+- `script.js` – Simple JavaScript loaded on the pages
 
-Feel free to modify these files to adapt the website to your needs.
+Feel free to adapt these files as the project evolves.
