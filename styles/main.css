@@ -46,3 +46,10 @@ form textarea {
     max-width: 400px;
     margin-bottom: 0.5rem;
 }
+
+.content-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}

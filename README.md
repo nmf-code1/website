@@ -17,4 +17,5 @@ Open `index.html` in your browser to view the site. No build steps are needed.
 - `styles/` – Contains `main.css` for styling
 - `script.js` – Simple JavaScript loaded on the pages
 
+- Images are loaded from remote placeholder URLs
 Feel free to adapt these files as the project evolves.
