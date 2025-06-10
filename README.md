@@ -16,6 +16,7 @@ Open `index.html` in your browser to view the site. No build steps are needed.
 - `contact.html` – Basic enquiry form
 - `styles/` – Contains `main.css` for styling
 - `script.js` – Simple JavaScript loaded on the pages
-
-- Images are loaded from remote placeholder URLs
+- `images/` – Local image files referenced in the site. The directory contains
+  a `.gitkeep` placeholder so it remains in version control even when empty.
+  Add your own images there and update the HTML as needed to use them.
 Feel free to adapt these files as the project evolves.
