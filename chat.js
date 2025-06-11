@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     const apiKeyInput = document.getElementById('apiKey');
     const chatForm = document.getElementById('chatForm');
     const messageInput = document.getElementById('message');
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!message) return;
         appendMessage('You', message);
         messageInput.value = '';
+
         const key = apiKeyInput.value.trim();
         if (!key) {
             appendMessage('System', 'Please enter your OpenAI API key.');
