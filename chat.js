@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    const apiKeyInput = document.getElementById('apiKey');
     const chatForm = document.getElementById('chatForm');
     const messageInput = document.getElementById('message');
     const chatLog = document.getElementById('chatLog');
@@ -17,21 +19,34 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!message) return;
         appendMessage('You', message);
         messageInput.value = '';
+
+        const key = apiKeyInput.value.trim();
+        if (!key) {
+            appendMessage('System', 'Please enter your OpenAI API key.');
+            return;
+        }
         try {
-            const response = await fetch('/api/chat', {
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${key}`,
                 },
-                body: JSON.stringify({ message })
+                body: JSON.stringify({
+                    model: 'gpt-3.5-turbo',
+                    messages: [
+                        { role: 'system', content: "You are an expert historian of No Man's Fort. Answer questions about its past." },
+                        { role: 'user', content: message }
+                    ]
+                })
             });
             if (!response.ok) {
-                const errData = await response.json();
-                appendMessage('System', 'Error: ' + (errData.error || response.statusText));
+                appendMessage('System', 'Error: ' + response.statusText);
                 return;
             }
             const data = await response.json();
-            appendMessage('Fort Historian', data.reply);
+            const reply = data.choices[0].message.content.trim();
+            appendMessage('Fort Historian', reply);
         } catch (err) {
             appendMessage('System', 'Request failed');
         }
