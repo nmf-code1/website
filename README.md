@@ -4,7 +4,9 @@ This project contains a simple HTML/CSS framework for the No Man's Fort website.
 
 ## Getting Started
 
-Open `index.html` in your browser to view the site. No build steps are needed.
+Install dependencies with `npm install` and start the server using `npm start`.
+Set the `OPENAI_API_KEY` environment variable before running to enable the
+history chat feature.
 
 ## Project Structure
 

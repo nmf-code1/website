@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact - No Man's Fort</title>
+    <title>History Chat - No Man's Fort</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -23,12 +23,12 @@
     </header>
     <main>
         <section>
-            <h2>Get in Touch</h2>
-            <p>For enquiries about stays, events or investment opportunities, please email <a href="mailto:info@example.com">info@example.com</a> or complete the form below.</p>
-            <form>
-                <label>Name:<br><input type="text" name="name"></label><br>
-                <label>Email:<br><input type="email" name="email"></label><br>
-                <label>Message:<br><textarea name="message" rows="4"></textarea></label><br>
+            <h2>Ask About the Fort's History</h2>
+            <p>Ask your question below to chat with an AI historian.</p>
+            <div id="chatLog" style="margin-top:1rem;">
+            </div>
+            <form id="chatForm">
+                <input type="text" id="message" placeholder="Ask something about the fort..." style="width:100%;max-width:400px;" required>
                 <button type="submit">Send</button>
             </form>
         </section>
@@ -36,5 +36,6 @@
     <footer>
         <p>&copy; 2023 No Man's Fort</p>
     </footer>
+    <script src="chat.js"></script>
 </body>
 </html>
