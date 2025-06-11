@@ -60,3 +60,15 @@ form textarea {
     display: block;
     margin: 1rem auto;
 }
+#chatLog {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    max-width: 600px;
+    background-color: #fafafa;
+    margin-bottom: 1rem;
+    overflow-y: auto;
+}
+
+.chat-message {
+    margin-bottom: 0.5rem;
+}
